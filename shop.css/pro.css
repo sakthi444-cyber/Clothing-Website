@@ -1,0 +1,331 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+--first-color: hsl(176,88%,27%) ;
+--first-color-alt: hsl(129,44%,94%) ;
+--second-color:hsl(34,94%,87%);
+--title-color: hsl(0,0%,13%);
+--text-color: hsl(154,13%,32%) ;
+--text-color-light: hsl(60,1%,56%) ;
+--body-color: hsl(0,0%,100%);
+--container-color: hsl(0,0%,93%) ;
+--border-color: hsl(129,39%,85%);
+--border-color-alt: hsl(113,15%,90%);
+
+/*========== Font and typography ==========*/
+/* .5rem = 8px | 1rem = 16px ... */
+--body-font: Poppins ;
+--second-font: Aboreto;
+--big-font-size: 3.5rem ;
+--h1-font-size: 2.7rem ;
+--h2-font-size: 2rem ;
+--h3-font-size: 1.75rem;
+--h4-font-size: 1.375rem;
+--large-font-size: 1.125rem ;
+--normal-font-size: 1rem ;
+--small-font-size: 0.875rem;
+--smaller-font-size: 0.75rem ;
+--tiny-font-size: 0.6875rem ;
+
+/*========== Font weight ==========*/
+--weight-400: 400;
+--weight-500: 500;
+--weight-600: 600;
+--weight-700: 700;
+
+/*========== Transition ==========*/
+--transition: cubic-bezier(0,0,0.05,1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+#navi{
+    
+    background-color: hsl(176,88%,27%);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+
+.nav-link{
+
+    font-size: 20px;
+    font-weight: bolder;
+    
+
+
+}
+#links{
+    transition: color 0.5s;
+
+}
+
+
+#links:hover{
+    color: whitesmoke;
+}
+
+
+.btn-buy{
+     padding: 10px 20px;
+     background:  #4f8b69;
+     border-radius: 30px; 
+     color: hsl(60, 100%, 90%);
+     font-weight: bolder;
+     border: none;
+     transition: 0.5s;
+}
+
+.btn-buy:hover{
+
+    padding: 30px 80px;
+    font-size: larger;
+    border-radius: 60px;
+
+}
+.size-btn{
+    border: none;
+    background-color:  hsl(129,39%,85%);
+    border-radius: 10px;
+    
+}
+
+.cart-icon{
+    position: relative;
+}
+
+.span-num{
+    
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(176,88%,27%);
+    position: absolute;
+    top: 32%;
+    left: 30%;
+    border-radius: 50%;
+}
+
+
+
+
+.span-num span{
+    position: absolute;
+    color: white;
+    font-weight: bolder;
+    bottom: 2%;
+    
+}
+@keyframes slide{
+    from{
+        transform:translateX(0)
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: white;
+    white-space: nowrap;
+    position: relative;
+
+}
+.logos:before .logos::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+
+}
+.logos:before{
+    left: 0;
+    background:linear-gradient(to left rgba(255,255,255,0),white);
+    
+}
+
+.logos:after{
+    right: 0;
+    background:linear-gradient(to right rgba(255,255,255,0),white);
+
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+
+.logos-slide img{
+    width: auto;
+    height: 70px;
+    margin: 0 40px;
+}
+
+
+
+.alert p {
+    font-size: large;
+    font-weight: 600;
+    color: hsl(60, 100%, 90%)
+}
+
+.alert a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 500;
+    color: hsl(60, 100%, 90%)
+
+}
+
+#form-search{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.textdec{
+    color: hsl(60, 100%, 90%);
+}
+#tedec{
+    text-decoration: none;
+
+}
+#row-banner{
+    display: flex;
+    justify-content: space-around;
+}
+.col-banner{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+article{
+    color: hsl(60, 100%, 90%);
+}
+
+
+.in{
+    border: none;
+    padding:1rem;
+    margin-left: 0.4rem;
+}
+
+.by-cart{
+    padding: 0.5rem;
+    border-radius: 3rem;
+    border: none;
+}
+
+.cart-Buy{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    display: flex;
+    gap: 10px;
+}
+
+.price h6{
+    padding-top: 12px;
+}
+
+.addi{
+    text-decoration: none;
+
+}
+
+
+#caro ul.navbar-nav li a{
+    position: relative;
+}
+#caro ul.navbar-nav li a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+#caro ul.navbar-nav li a:hover::after{
+    transform: scaleX(1);
+}
+
+
+ @media screen and (max-width:999px){ 
+
+    .meowshirt img{
+        width: 100%;
+        height: auto;
+    }
+
+    article h1{
+
+        font-size:var( -normal-font-size);
+    
+    }
+
+    .size-btn .in{
+
+        padding: 0;
+        font-size: small;
+    }
+
+   
+    .card-body h3{
+
+        font-size: medium;
+        
+
+    }
+
+    .card-body p{
+
+        display: none;
+
+       
+
+    }
+    .span-num{
+        position: relative;
+        top: 2;
+        left: 1%;
+        
+    }
+
+} 
+
+
+@media screen and (min-width:1000)and(max-width:1300px){
+
+    .size-btn span{
+
+        padding: 0;
+        font-size: small;
+    }
+   
+}
+
